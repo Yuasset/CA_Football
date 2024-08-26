@@ -69,8 +69,8 @@ players.Add(defender3);
 
 foreach (Team item in teams)
 {
-    Console.WriteLine("Takım: "+item.TeamName);
-    Console.WriteLine("Takım Rengi: "+ item.TeamColor);
+    Console.WriteLine("Takım: " + item.TeamName);
+    Console.WriteLine("Takım Rengi: " + item.TeamColor);
     Console.WriteLine("Oyuncu Sayısı: " + item.TeamSize);
 }
 
@@ -83,12 +83,14 @@ foreach (Player item in players)
 Console.WriteLine("Oyun:");
 foreach (Player item in players)
 {
-    Console.WriteLine("Oyuncu: "+item.Name);
-    Console.WriteLine("Koşma: "+item.Run(random.Next(1, 101)));
-    Console.WriteLine("Şut: "+item.Shoot(random.Next(1, 101)));
-    Console.WriteLine("Çalım: "+item.Feint(random.Next(1, 101)));
-    Console.WriteLine("Press: "+item.Pressing(random.Next(1, 101)));
+    Console.WriteLine("Oyuncu: " + item.Name);
+    Console.WriteLine("Koşma: " + item.Run(random.Next(1, 101)));
+    Console.WriteLine("Şut: " + item.Shoot(random.Next(1, 101)));
+    Console.WriteLine("Çalım: " + item.Feint(random.Next(1, 101)));
+    Console.WriteLine("Press: " + item.Pressing(random.Next(1, 101)));
+    if (item.Name == "Uğurcan Çakır")
+    {
+        Console.WriteLine(keeper.SaveBall(random.Next(1, 101)));
+    }
     Console.WriteLine();
 }
-    Console.WriteLine("Oyuncu: "+keeper.Name);
-    Console.WriteLine(keeper.SaveBall(random.Next(1, 101)));
